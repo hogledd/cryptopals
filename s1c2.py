@@ -8,7 +8,6 @@ CryptoPals - Set 1 Challenge 2
 
 import click
 
-
 @click.command()
 @click.option('--source', prompt='plaintext > ', help='The plaintext you wish to encrypt.')
 @click.option('--key', prompt='key > ', help='The key to use for encrypting the plaintext.')
@@ -42,7 +41,6 @@ def encrypt(source, key):
 
     else:
         print("Key length different")
-
 
 if __name__ == '__main__':
     encrypt()
