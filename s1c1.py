@@ -14,8 +14,8 @@ import base64
 def hexbin64(source):
     inbytes = bytearray.fromhex(source)
     encoded = base64.b64encode(inbytes)
-    print(encoded)
-    return encoded
+    print(encoded.decode())#.replace('\n',''))
+    #return encoded
 
 if __name__ == '__main__':
     hexbin64()
