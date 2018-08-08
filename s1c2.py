@@ -16,16 +16,16 @@ def encrypt(source, key):
     # check for equal length
     if len(source) == len(key):
         # print source and key to standard out
-        print("PLAIN HEXT:", source)
-        print("KEY HEXT:", key)
+        # print("PLAIN HEXT:", source)
+        # print("KEY HEXT:", key)
 
         # convert source and key from hex to ascii bytes
         input_bytes = bytes.fromhex(source)
         key_bytes = bytes.fromhex(key)
 
         # print byte results to standard out
-        print("PLAIN TEXT:", input_bytes)
-        print("KEY TEXT:", key_bytes)
+        # print("PLAIN TEXT:", input_bytes)
+        # print("KEY TEXT:", key_bytes)
 
         # operate xor on source and key
         mutable_input = bytearray(input_bytes)
@@ -36,8 +36,9 @@ def encrypt(source, key):
             cipher_text.append(cipher_bit)
 
         # print cipher text results to standard out
-        print("CIPHER TEXT:", bytes(cipher_text))
-        print("CIPHER HEXT:", bytes(cipher_text).hex())
+        # print("CIPHER TEXT:", bytes(cipher_text))
+        # print("CIPHER HEXT:", bytes(cipher_text).hex())
+        print(bytes(cipher_text).hex())
 
     else:
         print("Key length different")
